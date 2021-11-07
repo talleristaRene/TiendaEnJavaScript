@@ -1,6 +1,3 @@
-
-// alert(hoy.toDateString);
-
 var d = new Date();
 document.write( '<footer class="footer">');
     document.write( '<p class="foo__text">Todos los derechos Reservados Normandy Wings</p>');
@@ -12,6 +9,5 @@ document.write( '<footer class="footer">');
                                 d.getHours() +':' + d.getMinutes() + ':' + d.getSeconds()+
                         '</h3>' +
                     '</p>');
-    // document.write( '<p class="foo__text">'+ '<h3>' + d.getHours() +':' + d.getMinutes() + ':' + d.getSeconds() +'</h3>'+'</p>');
 document.write( '</footer>');
 
