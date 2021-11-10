@@ -1,0 +1,62 @@
+     <!-- Producto1 -->
+            <h4>Producto 1</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            
+            <!-- Producto 2 -->
+            <h4>Producto 2</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+<!-- Producto 3 -->
+            <h4>Producto 3</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 4 -->
+            <h4>Producto 4</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 5 -->
+            <h4>Producto 5</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 6 -->
+            <h4>Producto 6</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 7 -->
+            <h4>Producto 7</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 8 -->
+            <h4>Producto 8</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 9 -->
+            <h4>Producto 9</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+            <!-- Producto 10 -->
+            <h4>Producto 10</h4>
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+       

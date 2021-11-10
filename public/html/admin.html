@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración </title>
+    <!-- precargamos el estilo -->
+    <link type="text/css" rel="preload" href="../css/style.css">
+    <!-- direccionamos nuestro css -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+    <div class="contenedor__formulario">
+        <h1> Administración de Productos</h1>
+        <form name="formulario" id="form" class="formulario" method="get" action="">
+            
+            <label for="" class="formulario__label">Nombre </label>
+            <input id="nombre" type="text" class="formulario__input" placeholder="Nombre" required>
+
+            <label class="formulario__label">Tamaño </label>
+            <input id="tamanio" type="text" class="formulario__input" placeholder="Tamaño" required>
+
+            <label class="formulario__label">Precio </label>
+            <input id="precio" type="number" min="1" max="1000"class="formulario__input" placeholder="Precio" required>
+
+            <label class="formulario__label">Descripcción </label>
+            <textarea  id="descripccion" cols="30" rows="10"
+                placeholder="Ingresa una descripcón sobre el producto"></textarea>
+
+            <label class="formulario__label">Imagen</label>
+            <input id="archivo" type="file"  placeholder="Imagen" >
+
+            <button id="submit" class="formulario__boton" >Guardar</button>
+        </form>
+    </div>
+
+    
+    
+</body>
+
+</html>
