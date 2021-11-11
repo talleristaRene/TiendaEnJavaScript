@@ -5,43 +5,75 @@
 // Ademas si se pretendía utlizar una "matriz" u otra estructura para guardar el valor y el precio
 // Se tiene que especificar, pues hay vacios en esa explicación.
 function  funcionPrincipal(){
-    let arregloPreciosProductos = [];    
-    precioProducto1 = prompt("Ingresa el precio del producto 1: ");
-    arregloPreciosProductos[0] = precioProducto1;
-    precioProducto2 = prompt("Ingresa el precio del producto 2: ");
-    arregloPreciosProductos[1] = precioProducto2;
-    precioProducto3 = prompt("Ingresa el precio del producto 3: ");
-    arregloPreciosProductos[2] = precioProducto3;
-    alert("Arreglo antes de las modificaciones\n" + arregloPreciosProductos);
+    // let map = new Map();    
+    // nombreProducto1 = prompt("Ingresa el nombre del producto1: ");
+    // precioProducto1 = prompt("Ingresa el precio del producto 1: ");
+    // map.set(nombreProducto1, precioProducto1);
+    // nombreProducto2 = prompt("Ingresa el nombre del producto2: ");
+    // precioProducto2 = prompt("Ingresa el precio del producto 2: ");
+    // map.set(nombreProducto2,precioProducto2);
+    // nombreProducto3 = prompt("Ingresa el nombre del producto3: ");
+    // precioProducto3 = prompt("Ingresa el precio del producto 3: ");
+    // map.set(nombreProducto3,precioProducto3);
+
+    // Inicializacion de Array
+    // let arregloProductos = [
+    //     {nombre: nombreProducto1, precio: precioProducto1},
+    //     {nombre: nombreProducto2, precio: precioProducto2},
+    //     {nombre: nombreProducto3, precio: precioProducto3}
+    // ];
+
+    console.log("Arreglo antes de las modificaciones\n");
+    console.log(arregloProductos);
+    
     // Obtenemos tamanio
-    tamArreglo  = arregloPreciosProductos.length;
-    alert("Tamanio del arreglo: " + tamArreglo);
+    tamArreglo  = arregloProductos.length;
+    console.log("Tamaño del Array: " + tamArreglo);
     // Agregamos elemento al final
-    precioProductoNuevo = prompt("Ingresa el precio del producto Nuevo: ");
-    arregloPreciosProductos.push(precioProductoNuevo);
-    alert("Se agreggo otro elemento al final\n" + arregloPreciosProductos);
+    nombreProductoNuevo = prompt("Ingresa el nombre del Nuevo: ");
+    precioProductoNuevo = prompt("Ingresa el precio del Nuevo: ");
+    arregloProductos.push({
+        nombre: nombreProductoNuevo, precio: precioProductoNuevo
+    });
+    console.log("Se agreggo otro elemento al final\n");
+    console.log(arregloProductos);
+    
     // Agregamos elemento al inicio
-    precioProductoNuevo2 = prompt("Ingresa el precio del producto Nuevo2: ");
-    arregloPreciosProductos.unshift(precioProductoNuevo2);
-    alert("Se agrego otro elemento al inicio\n" + arregloPreciosProductos);
+    nombreProductoNuevo = prompt("Ingresa el nombre del Nuevo: ");
+    precioProductoNuevo = prompt("Ingresa el precio del Nuevo: ");
+    arregloProductos.unshift({
+        nombre:nombreProductoNuevo, precio: precioProductoNuevo
+    });
+    console.log("Se agrego otro elemento al inicio\n" );
+    console.log(arregloProductos);
+    
     // Sacamos elemento al final
-    alert("Arreglo antes de sacar elemento del final\n" + arregloPreciosProductos);
-    arregloPreciosProductos.pop();
-    alert("Se saco elemento del final\n" + arregloPreciosProductos);
+    console.log("Arreglo antes de sacar elemento del final\n");
+    console.log(arregloProductos);
+    arregloProductos.pop();
+    console.log("Se saco elemento del final\n" );
+    console.log(arregloProductos);
     // Sacamos elemento al inicio
-    alert("Arreglo antes de sacar elemento del inicio\n" + arregloPreciosProductos);
-    arregloPreciosProductos.shift();
-    alert("Se saco elemento del incio\n" + arregloPreciosProductos);
+    console.log("Arreglo antes de sacar elemento del inicio\n" );
+    console.log(arregloProductos);
+    arregloProductos.shift();
+    console.log("Se saco elemento del incio\n" );
+    console.log(arregloProductos);
     // ponemos arreglo en reversa
-    alert("Arreglo antes de volvtearlo \n" + arregloPreciosProductos);
-    arregloPreciosProductos.reverse();
-    alert("Arreglo ya volteado\n" + arregloPreciosProductos);
+    console.log("Arreglo antes de volvtearlo \n" );
+    console.log(arregloProductos);
+    arregloProductos.reverse();
+    console.log("Arreglo ya volteado\n" );
+    console.log(arregloProductos);
     // copiar porcion del arreglo -> en este caso los elementos en posicion 1,2.
-    porcionArreglo = arregloPreciosProductos.slice(1,3);
-    alert("Arreglo " + arregloPreciosProductos + "porcion del arreglo copiado\n" + porcionArreglo);
+    porcionArreglo = arregloProductos.slice(1,3);
+    console.log("Arreglo " );                       console.log(arregloProductos);
+    console.log("porcion del arreglo copiado\n");   console.log(porcionArreglo);
+
     // copiar porcion del arreglo -> en este caso los elementos en posicion (0,0).
-    porcionArreglo = arregloPreciosProductos.splice(0,0);
-    alert("Arreglo " + arregloPreciosProductos + "porcion del arreglo copiado\n" + porcionArreglo);
+    porcionArreglo = arregloProductos.splice(0,0);
+    console.log("Arreglo ");                        console.log(arregloProductos );
+    console.log("porcion del arreglo copiado\n");   console.log(porcionArreglo);
 }
 
 
