@@ -1,12 +1,17 @@
-const arreglo={
+/*const arreglo={
     nombre: '', precio: null
-}
+}*/
 
-function productos(){
+
+
+
+
+
+/*function productos(){
     var valorProductos = document.formulario.nombre.value;
     arreglo.push(valorProductos);
     console.log(arreglo);
-}
+}*/
 // const formulario = document.querySelector('.formulario');
 // const nombre = document.querySelector('#nombre');
 // const precio = document.querySelector('#precio');
@@ -52,14 +57,18 @@ function productos(){
 // })
 
 
+
+
 /**
  * Funcion que permite escribir los valores que se ingresan al formulario mediante API Web
  */
-// function escribe() {
+ function escribe() {
+    console.log(document.getElementById("nombre").value);   
+    console.log(document.getElementById("precio").value);  
 
-//     var idNombre;
-//     var idNombre;
-//     var i = 0;
+     var idNombre;
+    var idNombre;
+    var i = 0;
 //     // Forma A
 //     arreglo.push({
 //         nombre: document.getElementById("nombre").value, precio: document.getElementById("precio").value
@@ -74,14 +83,15 @@ function productos(){
 //     // }
 //     console.log(arreglo);
     
-//     escribir = document.getElementById("caja");
-//     miTitulo = "<h1>" + "Caja" +"</h1>";
-//     totalProductos = "<h3>" + "Total de Productos: " + "<p>"+ i + "</p>"  + "</h3>";
-//     costoTotal = "<h3>" + "Costo Total : " + "<p>"+ i + "</p>"  + "</h3>";
+     escribir = document.getElementById("caja");
+     miTitulo = "<h1>" + "Caja" +"</h1>";
+     totalProductos = "<h3>" + "Total de Productos: " + "<p>"+ i + "</p>"  + "</h3>";
+     costoTotal = "<h3>" + "Costo Total : " + "<p>"+ i + "</p>"  + "</h3>";
     
-//     contenedor = '<div class="contenedor__formulario">' + miTitulo + nombre + precio  + "</div>";
-//     escribir.innerHTML = contenedor;
-// }
-// window.onload = function() {
-// document.rellenar.ver.onclick = escribe
-// }   
+     contenedor = '<div class="contenedor__formulario">' + miTitulo + nombre + precio  + "</div>";
+     escribir.innerHTML = contenedor;
+}
+
+window.onload = function() {
+document.rellenar.ver.onclick = escribe
+}   
