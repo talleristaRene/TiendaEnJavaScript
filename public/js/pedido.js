@@ -1,5 +1,10 @@
+'use strict';
+import {Catalogo} from './catalogo.js';
+
 let productos = [];
 let total = 0;
+
+
 
 /**
  * Funcion que va sumando los valores del arreglo para obbtener el Costo Total.
@@ -9,6 +14,7 @@ function generarTotal(){
     for(let i = 0; i < productos.length; i++){
         suma += productos[i].precio;
     }
+    console.log(Catalogo());
     total = suma;
 }
 /**
@@ -28,6 +34,8 @@ function generarTotal(){
     costoTotal = "<h3>" + "Costo Total : " + "<p>"+ total + "</p>"  + "</h3>";
     contenedor = '<div class="contenedor__formulario">' + miTitulo + totalProductos + costoTotal  + "</div>";
     escribir.innerHTML = contenedor;
+
+    console.log(  "assaf"  );
 }
 
 window.onload = function() {
