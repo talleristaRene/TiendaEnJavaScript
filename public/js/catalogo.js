@@ -4,14 +4,19 @@ import {Producto} from './producto.js';
 
 export class Catalogo{
     constructor(){
-        this.listaProductos = [new Producto()];
+        this.listaProductos = [];
     }
     getListaProductos(){
         let listaP = this.listaProductos.slice();
         return listaP;
     }
     agregarProducto(producto){
-        this.getListaProductos().push(producto);
+        this.listaProductos.push(producto);
+    }
+    mostrarListaProductos(){
+        this.listaProductos.forEach(element => {
+            console.log(element.getNombre()+ "->"+element.getPrecio() );
+        });
     }
 }
 
@@ -23,5 +28,4 @@ let catalogo = new Catalogo();
 catalogo.agregarProducto(producto1);
 catalogo.agregarProducto(producto2);
 catalogo.agregarProducto(producto3);
-
-console.log(catalogo);
+catalogo.mostrarListaProductos();

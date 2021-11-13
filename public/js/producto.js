@@ -7,9 +7,7 @@ export class Producto{
     }
 
     setNombre(nombre){
-        if(this.validarNombre(nombre)){
             this.nombre = nombre;
-        }
     }
     setPrecio(precio){
         if(this.validarPrecio(precio)){
@@ -35,17 +33,6 @@ export class Producto{
         }
         return valido;
     }
-    validarNombre(nombre){
-        var expRechazada = /^[0-9]+$/;
-        var valido = false;
-        try {
-            if(!nombre.match(expRechazada)){
-                valido = true;
-            }
-        } catch (error) {
-            console.log(error);
-        }
-        return valido;
-    }
+    
   
 }
