@@ -1,9 +1,31 @@
 'use strict';
-import {Catalogo} from './catalogo.js';
+import {Producto} from './producto.js';
 
 let productos = [];
 let total = 0;
 
+var producto1  = new Producto("Papas", 24.3);
+let producto2  = new Producto("Alitas", 24.3);
+let producto3  = new Producto("Papas", 24.3);
+
+
+var catalogo = {
+    nombre: producto1.getNombre(), precio: producto1.getPrecio(),
+};
+
+catalogo.push({
+    "nombre": "producto2.getNombre()", "precio": "producto2.getPrecio()"
+});
+
+
+
+
+console.log(catalogo);
+
+
+// for (let i = 0; i < catalogo.length; i++) {
+//     console.log(catalogo[i]);
+// }
 
 
 /**
@@ -21,6 +43,7 @@ function generarTotal(){
  * Funcion que permite escribir los valores que se ingresan al formulario mediante API Web
  */
  function escribe() {
+    
     var nombreP =  document.getElementById("nombre").value;   
     var precioP =  parseInt( document.getElementById("precio").value ) ; 
     console.log(precioP);

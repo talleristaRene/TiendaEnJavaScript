@@ -1,7 +1,7 @@
 'use strict';
 export class Producto{
 
-    constructor(nombre, precio, imagen){
+    constructor(nombre, precio){
         this.setNombre(nombre);
         this.setPrecio(precio);
     }
@@ -33,6 +33,4 @@ export class Producto{
         }
         return valido;
     }
-    
-  
 }
