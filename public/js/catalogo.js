@@ -58,13 +58,19 @@ function main() {
     console.log("El arreglo de Productos Tiene :" + arrProductos.length + " productos");
 }
 
+/**
+ * Funcion que escribe los productos del catalogo en una tabla
+ */
 function escribe() {
     var producto; 
     var catalogo    =  Object.create(Catalogo);
     var nombreP     =  document.getElementById("nombre").value;   
     var existenciaP = document.getElementById("existencia").value;
     var precioP     = document.getElementById("precio").value;
-    producto        = new Producto(nombreP, existenciaP, precioP);
+
+    if( esNumero(precioP) ){
+        producto        = new Producto(nombreP, existenciaP, precioP);
+    }
     catalogo.agregarProducto(producto);
 
     var contenedor = document.getElementById("contenedor__tabla");
@@ -77,12 +83,16 @@ function escribe() {
                     '<th scope="col" >'+"<p>"+"Precio"+"</p>"+'</th>'+
                 '</tr>'+
             '</thead>';
-    
+
+
     for (let i = 0; i < catalogo.getLengthProductos(); i++) {
         var listaProductos = catalogo.getProductos();
         tabla +=    "<tbody>"+
                         "<tr>"+
-                            '<th scope="col">'+"<p>"+listaProductos[i].getNombre()+"</p>"+'</th>'+
+                            // '<th scope="col">'+"<p>"+eval( listaProductos[i].getNombre() )+"</p>"+'</th>'+
+                            // '<th scope="col">'+"<p>"+listaProductos[i].getExistencia()+"</p>"+'</th>'+
+                            // '<th scope="col">'+"<p>"+listaProductos[i].getPrecio()+"</p>"+'</th>'+
+                            '<th scope="col">'+"<p>"+eval( showProps( Catalogo) )+"</p>"+'</th>'+
                             '<th scope="col">'+"<p>"+listaProductos[i].getExistencia()+"</p>"+'</th>'+
                             '<th scope="col">'+"<p>"+listaProductos[i].getPrecio()+"</p>"+'</th>'+
                         "</tr>"+
@@ -93,6 +103,26 @@ function escribe() {
 
     var cont = '<div class="contenedor__formulario">' + tabla +"</div>";
     contenedor.innerHTML = cont;
+}
+
+function showProps(obj) {
+    let propiedades = [];
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            /* useful code here */
+            propiedades.push(key);
+        }
+    }
+}
+
+function esNumero(valor){
+    var valido = false;
+    if( !isNaN(valor) ){
+        valido = true;
+    }else{
+        alert("Debes de ingresar un valor numerico");
+    }
+    return valido;
 }
 
 window.onload = function() {
