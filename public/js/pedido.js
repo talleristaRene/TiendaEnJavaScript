@@ -62,7 +62,7 @@ function generarTotal(){
 /**
  * Funcion que permite escribir los valores que se ingresan al formulario mediante API Web
  */
- function escribe() {
+function escribe() {
     
     var nombreP =  document.getElementById("nombre").value;   
     var precioP =  parseInt( document.getElementById("precio").value ) ; 

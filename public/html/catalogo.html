@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Productos</title>
+    <link type="text/css" rel="preeload" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Tabla de información-->
+        <div class="cont">
+            <h1> Catalogo de Productos</h1>
+            
+            <!-- Formulario-->
+            <div class="cont__formulario">
+                <form class="form" name="rellenar" action="#">
+                    <h3>Agregado de Productos</h3>
+                    <label class="form__label"> Nombre </label>
+                    <input class="form__input" id="nombre" name="nombre" type="text"
+                        placeholder="Ingresa el Nombre">
+                    <label class="form__label"> Existencia </label>
+                    <input class="form__input" id="existencia" name="existencia" type="number"
+                        placeholder="Ingresa el número de existentes" min="1" max="500">
+                    <label class="form__label"> Precio </label>
+                    <input class="form__input" id="precio" name="precio" type="number"
+                        placeholder="Ingresa el número de existentes" min="10" max="10000">
+                    <button class="form__boton" id="ver" type="button" onClick="productos()">Enviar</button>
+                </form>
+                <div id="caja">
+                    <h1 class="titulo-lista">Lista de Productos</h1>
+                   <div id="contenedor__tabla">
+
+                   </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="../js/catalogo.js"></script>   
+</body>
+
+</html>

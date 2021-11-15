@@ -4,19 +4,21 @@ const path = require('path');//Para evitar errores con las direcciones en cada s
 
 app.use(express.static('public'));   
 
-app.get('/', (req,res) =>{
-	res.sendFile(path.join(__dirname, 'public/html/pedido.html'));
-})
-app.get('/', (req,res) =>{
-	res.sendFile(path.join(__dirname, 'public/html/productos.html'));
-})
-app.get('/', (req, res) => { 
-	res.sendFile(path.join(__dirname, 'public/html/index.html')); 
-});
-
 app.get('/', (req,res) => {
-	res.sendFile(path.join(__dirname, 'public/html/prueba.html'))
+	res.sendFile(path.join(__dirname, 'public/html/catalogo.html'));
 })
+
+// app.get('/', (req,res) =>{
+// 	res.sendFile(path.join(__dirname, 'public/html/pedido.html'));
+// })
+// app.get('/', (req,res) =>{
+// 	res.sendFile(path.join(__dirname, 'public/html/productos.html'));
+// })
+// app.get('/', (req, res) => { 
+// 	res.sendFile(path.join(__dirname, 'public/html/index.html')); 
+// });
+
+
 
 
 app.listen(3000, () => {
