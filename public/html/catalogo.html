@@ -22,14 +22,14 @@
                     <h3>Agregado de Productos</h3>
                     <label class="form__label"> Nombre </label>
                     <input class="form__input" id="nombre" name="nombre" type="text"
-                        placeholder="Ingresa el Nombre">
+                        placeholder="Ingresa el Nombre" required>
                     <label class="form__label"> Existencia </label>
                     <input class="form__input" id="existencia" name="existencia" type="number"
-                        placeholder="Ingresa el número de existentes" min="1" max="500">
+                        placeholder="Ingresa el número de existentes" min="1" max="500" required>
                     <label class="form__label"> Precio </label>
                     <input class="form__input" id="precio" name="precio" type="number"
-                        placeholder="Ingresa el número de existentes" min="10" max="10000">
-                    <button class="form__boton" id="ver" type="button" onClick="productos()">Enviar</button>
+                        placeholder="Ingresa el número de existentes" min="10" max="10000" required>
+                    <button class="form__boton" id="ver" type="button" onClick="escribe()">Enviar</button>
                 </form>
                 <div id="caja">
                     <h1 class="titulo-lista">Lista de Productos</h1>

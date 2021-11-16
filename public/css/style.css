@@ -9,7 +9,6 @@
     --color-secundario: rgba(242, 199, 9, 0.7);
     --color-secundario-dos: rgba(255, 209, 6, 0.7);
     --color-bblanco: rgb(241, 225, 225);
-
 }
 
 /* Globales */
@@ -294,8 +293,11 @@ h3{
 
 
 /* Tabla */
-.cabeza-tabla{
+.tabla{
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
+}
+.tabla__cabecera{
+    border: solid;
 }
