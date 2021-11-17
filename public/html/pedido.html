@@ -21,10 +21,16 @@
     <div class="contenedor__formulario">
         <form class="formulario" name="rellenar" action="#" >
             <h3>Productos</h3>
+            <!-- nombre producto -->
             <label class="formulario__label" > Nombre : </label>
-            <input class="formulario__input" id="nombre"  name="nombre" type="text" placeholder="Ingresa el Nombre">
+            <input class="formulario__input" id="nombre"  name="nombre" type="text" placeholder="Ingresa el Nombre" required>
+            <!-- precio producto -->
             <label class="formulario__label" > Precio : </label>
-            <input class="formulario__input" id="precio"  name="precio" type="number" placeholder="Ingresa el Nombre">
+            <input class="formulario__input" id="precio"  name="precio" type="number" placeholder="Ingresa el Precio" required>
+            <!-- cantidad producto -->
+            <label class="formulario__label" > Precio : </label>
+            <input class="formulario__input" id="num"  name="num" type="number" placeholder="Ingresa la cantidad de productos" required>
+            <!-- boton del fomrulario -->
             <button class="formulario__boton"  id="ver" type="button" onClick="productos()">Enviar</button>
         </form>
     </div>
