@@ -71,48 +71,16 @@ const nombre        = document.querySelector('#nombre');
 const precio        = document.querySelector('#precio');
 const cantidad      = document.querySelector('#cantidad');
 
+
 nombre.addEventListener('input', leerInformacion);
 precio.addEventListener('input', leerInformacion);
 cantidad.addEventListener('input', leerInformacion);
-formulario.addEventListener('submit', function(evento){
-    evento.preventDefault();
-    const {nombre, precio, cantidad} = datos;
-    producto = new Producto(nombre, precio, cantidad);
-    catalogo.agregarProducto(producto);
 
-
-
-    
-});
 
 
 function leerInformacion(evento){
     datos[evento.target.id ] = evento.target.value;
 }
-
-
-
-function main() {
-    // let arrProductos = [];
-    // var producto1 = new Producto("Papas", 100);
-    // var producto2 = new Producto("Alitas", 50);
-    // var producto3 = new Producto("Boneles", 70);
-    // var producto4 = new Producto("Aros de Cebolla", 100);
-    // arrProductos.push(producto1);
-    // arrProductos.push(producto2);
-    // arrProductos.push(producto3);
-    // arrProductos.push(producto4);
-
-    
-
-    // validacion
-
-    // Envio
-
-}
-
-
-main();
 
 /**
  * Funcion que va sumando los valores del arreglo para obbtener el Costo Total.
@@ -125,72 +93,39 @@ function generarTotal(){
     total = suma;
 }
 
-var nombreP = document.querySelector('#nombre').value;
-var cantidadP = parseInt( document.querySelector('#cantidad').value );
-var precioP = parseInt( document.querySelector('#precio').value ) ;
+
 /**
  * Funcion que permite escribir los valores que se ingresan al formulario mediante API Web
  */
-function escribe() {
-    var producto; 
-    var catalogo    =  Object.create(Catalogo);
-    
-    
-    producto = new Producto(nombreP, precioP, cantidadP);
-    catalogo.agregarProducto(producto);
+function escribe(listaProductos) {
 
-    // generarTotal();
     // Se Escribe la informacion
-    const contenedor = document.querySelector('#contenedor__tabla');
-    contenedor.innerHTML
-    const tabla = document.createElement('TABLE');
-    contenedor.appendChild(tabla);
-    tabla.classList.add('tabla');
-    
-    const cabecera = document.createElement('THEAD');
-    cabecera.classList.add('tabla__cabecera');
-    tabla.appendChild(cabecera);
-
-    const columna = document.createElement('TR');
-    cabecera.appendChild(columna);
-
-    const valCeldas = ['Nombre', 'Precio', 'Cantidad'];
-    
-    for (let index = 0; index < 3; index++) {
-        const celda = document.createElement('TH');
-        celda.textContent = valCeldas[index];
-        columna.appendChild(celda);
-    }
-    
-    var listaProductos = catalogo.getProductos();
-    const cuerpo = document.createElement('TBODY');
-    cuerpo.classList = 'tabla__cuerpo';
-    tabla.appendChild(cuerpo);
-    // const valFilas = ['Nombre', 'Precio', 'Cantidad'];
+    const cuerpo = document.querySelector('.tabla__cuerpo');
     const fila = document.createElement('TR');
     cuerpo.appendChild(fila);
-    
     const celdaNombre = document.createElement('TH');
     const celdaPrecio = document.createElement('TH');
     const celdaCantidad = document.createElement('TH');
-    for (let i = 0; i < listaProductos.length; i++) {
-        console.log(listaProductos[i].getNombre());
-            celdaNombre.textContent   = listaProductos[i].getNombre();
-            celdaPrecio.textContent   = listaProductos[i].getPrecio();
-            celdaCantidad.textContent = listaProductos[i].getCantidad();        
+    
+    for (let index = 0; index < listaProductos.length; index++) {
+        celdaNombre.textContent    = listaProductos[index].getNombre();
+        celdaPrecio.textContent    = listaProductos[index].getPrecio();
+        celdaCantidad.textContent  = listaProductos[index].getCantidad();
     }
     fila.appendChild(celdaNombre);
     fila.appendChild(celdaPrecio);
     fila.appendChild(celdaCantidad);
-    
-    
-    // contenedor.innerHTML = contenedor;
+}
 
-
+function main() {
+    formulario.addEventListener('submit', function(evento){
+        evento.preventDefault();
+        const {nombre, precio, cantidad} = datos;
+        producto = new Producto(nombre, precio, cantidad);
+        catalogo.agregarProducto(producto);
+        escribe(catalogo.getProductos());
+    });
 }
 
 
-
-window.onload = function() {
-    document.rellenar.ver.onclick = escribe
-}   
+main();

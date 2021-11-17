@@ -28,12 +28,23 @@
             <label class="formulario__label" > Número de elementos : </label>
             <input class="formulario__input" id="cantidad"  name="cantidad" type="number" placeholder="Ingresa la cantidad de productos" required>
             <!-- boton del fomrulario -->
-            <button class="formulario__boton"  id="ver" type="submit" onClick="productos()">Enviar</button>
+            <button class="formulario__boton"  id="ver" type="submit" >Enviar</button>
         </form>
     </div>
     <div id="caja">
         <h1 class="titulo-lista">Lista Productos</h1>
         <div id="contenedor__tabla">
+            <table class="tabla">
+                <thead class="tabla__cabecera">
+                    <tr>
+                        <th id="cabecera__nombre"><p>Nombre</p></th>
+                        <th id="cabecera__nombre"><p>Precio</p></th>
+                        <th id="cabecera__nombre"><p>Cantidad</p></th>
+                    </tr>
+                    <tbody class="tabla__cuerpo">
+                    </tbody>
+                </thead>
+            </table>
 
         </div>
     </div>
