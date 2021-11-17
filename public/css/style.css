@@ -248,11 +248,11 @@ h3{
 }
 #caja {
     margin-top:30px;
-    width: 700%;
+    width: 100%;
     border: .6px  dotted black;
     box-shadow: 0 0 20px 1px rgba(0,0,0, .3);
     background-color: var(--color-primario);
-    float:left;
+    float:inline-start;
 }
 
 /* .form h4,h3{

@@ -15,9 +15,6 @@
 
 <body>
     <h1> Pedido</h1>
-    <div id="caja">
-        <h1>Caja</h1>
-    </div>
     <div class="contenedor__formulario">
         <form class="formulario" name="rellenar" action="#" >
             <h3>Productos</h3>
@@ -28,14 +25,19 @@
             <label class="formulario__label" > Precio : </label>
             <input class="formulario__input" id="precio"  name="precio" type="number" placeholder="Ingresa el Precio" required>
             <!-- cantidad producto -->
-            <label class="formulario__label" > Precio : </label>
-            <input class="formulario__input" id="num"  name="num" type="number" placeholder="Ingresa la cantidad de productos" required>
+            <label class="formulario__label" > Número de elementos : </label>
+            <input class="formulario__input" id="cantidad"  name="cantidad" type="number" placeholder="Ingresa la cantidad de productos" required>
             <!-- boton del fomrulario -->
-            <button class="formulario__boton"  id="ver" type="button" onClick="productos()">Enviar</button>
+            <button class="formulario__boton"  id="ver" type="submit" onClick="productos()">Enviar</button>
         </form>
     </div>
+    <div id="caja">
+        <h1 class="titulo-lista">Lista Productos</h1>
+        <div id="contenedor__tabla">
 
-    <script type="module" src="../js/pedido.js"></script>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pedido.js"></script>
 </body>
 
 </html>
