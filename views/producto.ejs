@@ -1,0 +1,34 @@
+<% include templates/header.html%>
+    <header class="header">
+        <a href="/">
+            <img class="header__logo" src="/images/logo.png" alt="Logo">
+        </a>
+    </header>
+
+    <nav class="nav">
+        <a class="nav__enlace" href="/">Tienda</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Wings</h1>
+        <div class="wings">
+            <img src="/images/frappe.png" alt="wings" class="wings__img">
+            <div class="wings__info">
+                <form action="" class="formulario">
+                    <select class="formulario__opccion">
+                        <option disable selected>--Seleccionar Tamaño--</option>
+                        <option>Pequeñas</option>
+                        <option>Medianas</option>
+                        <option>Bandeja</option>
+                    </select>
+                    <input class="formulario__opccion" min="1" max="100" type="number" placeholder="0">
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    
+</body>
+
+</html>
