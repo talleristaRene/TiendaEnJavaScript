@@ -6,15 +6,15 @@ const listaProductos = Catalogo.Catalogo.getProductos();
 
 /* GET home page. */
 router.get('/',(req,res) =>{
-    res.render('index.html');
+    res.render('index');
 });
 
 router.get('/pedido', function(req, res) {
-  res.render('pedido.html', { titulo: 'Lista Productos' });
+  res.render('pedido', { titulo: 'Lista Productos' });
 });
 
 router.get('/producto', function(req, res) {  
-  res.render('producto.html',{
+  res.render('producto',{
     listaProductos
   });
 });
