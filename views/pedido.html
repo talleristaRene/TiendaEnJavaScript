@@ -1,0 +1,37 @@
+<% include templates/header.html%>
+    <h1> Pedido</h1>
+    <div class="contenedor__formulario">
+        <form class="formulario" name="rellenar" action="#" >
+            <h3>Productos</h3>
+            <!-- nombre producto -->
+            <label class="formulario__label" > Nombre : </label>
+            <input class="formulario__input" id="nombre"  name="nombre" type="text" placeholder="Ingresa el Nombre" required>
+            <!-- precio producto -->
+            <label class="formulario__label" > Precio : </label>
+            <input class="formulario__input" id="precio"  name="precio" type="number" placeholder="Ingresa el Precio" required>
+            <!-- cantidad producto -->
+            <label class="formulario__label" > Número de elementos : </label>
+            <input class="formulario__input" id="cantidad"  name="cantidad" type="number" placeholder="Ingresa la cantidad de productos" required>
+            <!-- boton del fomrulario -->
+            <button class="formulario__boton"  id="ver" type="submit" >Enviar</button>
+        </form>
+    </div>
+    <div id="caja">
+        <h1 class="titulo-lista"></h1>
+        <div id="contenedor__tabla">
+            <table class="tabla">
+                <thead class="tabla__cabecera">
+                    <tr>
+                        <th id="cabecera__nombre"><p>Nombre</p></th>
+                        <th id="cabecera__nombre"><p>Precio</p></th>
+                        <th id="cabecera__nombre"><p>Cantidad</p></th>
+                    </tr>
+                    <tbody class="tabla__cuerpo">
+                    </tbody>
+                </thead>
+            </table>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="./javascripts/pedido.js"></script>
+<% include templates/footer.html%>
