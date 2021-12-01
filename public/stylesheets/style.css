@@ -106,6 +106,10 @@ main{
 
 
 /* Estilo para los productos */
+
+#contenedor__tabla{
+  padding-top: 15px;
+}
 .contenedor-productos{
   grid-template-columns: repeat(2, 1fr);
   display: grid;
@@ -148,8 +152,6 @@ main{
   padding: top 10px;
   display: block;
   margin-top: 10px;
-}
-.boton__carrito {
   border-radius: 15px;
   border: none;
   color: white;
@@ -166,14 +168,51 @@ main{
 .boton__carrito:hover{
   background-color: #3e8e41;
 }
-.botones__eliminar:hover{
-  background-color:#db3b30d2;
-}
 .boton__carrito img{
   padding-right: 10px;
   height: 80px;
   width: 80px;
 }
+
+.boton__add{
+  background-color: #4CAF50; 
+}
+.boton__del{
+  background-color: #ee4033d2;
+}
+.boton__up{
+  background-color: #486de6; 
+}
+.boton__add, .boton__del, .boton__up{
+  justify-content: center;
+  padding: top 10px;
+  display: inline-flex;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 3px ;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15x;
+  margin: 2px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+}
+
+
+.boton__add:hover{
+  background-color: #3e8e41;
+}
+.boton__del:hover{
+  background-color:#a92e25d2;
+}
+.boton__up:hover{
+  background-color:#3754b5; 
+}
+
 
 /* Producto */
 

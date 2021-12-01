@@ -1,0 +1,54 @@
+<% include templates/header.ejs%>
+<div id="caja">
+            <h1 class="titulo-lista">Administración de Productos</h1>
+            
+            <button class="boton__add" type="submit">Agregar Producto</button>
+            <div id="contenedor__tabla">
+                <table class="tabla">
+                    <thead class="tabla__cabecera">
+                        <tr>
+                            <th id="cabecera__nombre">
+                                <p>Número</p>
+                            </th>
+                            <th id="cabecera__nombre">
+                                <p>Nombre</p>
+                            </th>
+                            <th id="cabecera__nombre">
+                                <p>Precio</p>
+                            </th>
+                            <th id="cabecera__nombre">
+                                <p>Cantidad </p>
+                            </th>
+                            <th id="cabecera__nombre">
+                                <p>Acción </p>
+                            </th>
+                            
+                        </tr>
+                    <tbody class="tabla__cuerpo">
+                        <% productos.forEach(function(productos) { %>
+                            <tr>
+                                <th>
+                                    <%= productos.id%>
+                                </th>
+                                <th>
+                                    <%= productos.nombre%>
+                                </th>
+                                <th>
+                                    <%= productos.precio%>
+                                </th>
+                                <th>
+                                    <%= productos.cantidad%>
+                                </th>
+                                <th>
+                                    <button onclick='mostrarFormulario("update")' class="boton__up" type="submit">Modificar</button>
+                                    <button onclick='mostrarFormulario("delete")' class="boton__del" type="submit">Eliminar</button>
+                                </th>
+                        <% }) %>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <script src="../javascripts/validacion.js"></script>
+<%include templates/footer.ejs%>
+    
